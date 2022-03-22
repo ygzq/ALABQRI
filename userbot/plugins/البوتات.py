@@ -236,7 +236,7 @@ async def _(iqthon):  # sourcery no-metrics
         else:
             sandy = True
             await iqevent.edit(i, parse_mode=_format.parse_pre)
-@iqthon.on(admin_cmd(pattern="تيك توك(?: |$)(.*)"))
+@iqthon.on(admin_cmd(pattern="تيك(?: |$)(.*)"))
 async def _(iqthon):
     reply_message = await iqthon.get_reply_message()
     if not reply_message:

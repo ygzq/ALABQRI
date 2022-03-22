@@ -104,9 +104,9 @@ async def do_pm_permit_action(event, chat):
     if custompmpermit is not None:
         USER_BOT_NO_WARN = custompmpermit.format(mention=mention,first=first,last=last,fullname=fullname,username=username,userid=userid,my_first=my_first,my_last=my_last,my_fullname=my_fullname,my_username=my_username,my_mention=my_mention,totalwarns=totalwarns,warns=warns,remwarns=remwarns)
     elif gvarstatus("pmmenu") is None:
-        USER_BOT_NO_WARN = f"𓍹ⵧⵧⵧⵧⵧⵧⵧⵧᵗᵉˡᵉᵗʰᵒᶰ ᵃʳᵃᵇˢ‌ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n\n❞ هـاﺂ هـݪـو٘ {mention} ❝ 🦋\nاﻧـا آݪان ﻣـﺷـغٓول ݪاتࢪﺳـݪ ݪي ࢪﺳـآئݪ ڪﺛـيࢪه وآݪآ سيٰتم حٓـظٍـࢪڪ فقـط قـࢦ سـبب مجـيٰـئڪ اوَ حٰٖـآِجٰتـڪِٰ ، عٰٖـنِ٘ـدمـا آﻋـۅد سِ٘أوافـق علـى ﻣحٰٖـآِډثـتِـك  .. ❞ \n ⤶ ❨  `{warns}/{totalwarns}` ❩\n\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧᵗᵉˡᵉᵗʰᵒᶰ ᵃʳᵃᵇˢ‌ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+        USER_BOT_NO_WARN = f"𓍹ⵧⵧ𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸ⵧⵧ𓍻\n\n❞ هـاﺂ هـݪـو٘ {mention} ❝ 🦋\nاﻧـا آݪان ﻣـﺷـغٓول ݪاتࢪﺳـݪ ݪي ࢪﺳـآئݪ ڪﺛـيࢪه وآݪآ سيٰتم حٓـظٍـࢪڪ فقـط قـࢦ سـبب مجـيٰـئڪ اوَ حٰٖـآِجٰتـڪِٰ ، عٰٖـنِ٘ـدمـا آﻋـۅد سِ٘أوافـق علـى ﻣحٰٖـآِډثـتِـك  .. ❞ \n ⤶ ❨  `{warns}/{totalwarns}` ❩\n\n𓍹ⵧⵧ𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸ⵧⵧ𓍻"
     else:
-        USER_BOT_NO_WARN = f"𓍹ⵧⵧⵧⵧⵧⵧⵧⵧᵗᵉˡᵉᵗʰᵒᶰ ᵃʳᵃᵇˢ‌ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻\n\n❞ هـاﺂ هـݪـو٘ {mention} ❝ 🦋\nاﻧـا آݪان ﻣـﺷـغٓول ݪاتࢪﺳـݪ ݪي ࢪﺳـآئݪ ڪﺛـيࢪه وآݪآ سيٰتم حٓـظٍـࢪڪ فقـط قـࢦ سـبب مجـيٰـئڪ اوَ حٰٖـآِجٰتـڪِٰ ، عٰٖـنِ٘ـدمـا آﻋـۅد سِ٘أوافـق علـى ﻣحٰٖـآِډثـتِـك  .. ❞ \n ⤶ ❨  `{warns}/{totalwarns}` ❩\n\n𓍹ⵧⵧⵧⵧⵧⵧⵧⵧᵗᵉˡᵉᵗʰᵒᶰ ᵃʳᵃᵇˢ‌ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻"
+        USER_BOT_NO_WARN = f"𓍹ⵧⵧ𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸ⵧⵧ𓍻\n\n❞ هـاﺂ هـݪـو٘ {mention} ❝ 🦋\nاﻧـا آݪان ﻣـﺷـغٓول ݪاتࢪﺳـݪ ݪي ࢪﺳـآئݪ ڪﺛـيࢪه وآݪآ سيٰتم حٓـظٍـࢪڪ فقـط قـࢦ سـبب مجـيٰـئڪ اوَ حٰٖـآِجٰتـڪِٰ ، عٰٖـنِ٘ـدمـا آﻋـۅد سِ٘أوافـق علـى ﻣحٰٖـآِډثـتِـك  .. ❞ \n ⤶ ❨  `{warns}/{totalwarns}` ❩\n\n𓍹ⵧⵧ𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸ⵧⵧ𓍻"
     addgvar("pmpermit_text", USER_BOT_NO_WARN)
     PM_WARNS[str(chat.id)] += 1
     try:
@@ -462,7 +462,7 @@ async def on_plug_in_callback_query_handler(event):
     if event.query.user_id == event.client.uid:
         text = "**⎈ ⦙   عـذرا ، هـذه الـخـيـارات لـلـمـسـتـخـدم الـذي يـراسـلـك 🧸♥️**"
         return await event.answer(text, cache_time=0, alert=True)
-    text = "**┏┓╋┏┓┏┓\n┣╋━┫┗┫┗┳━┳━┳┓\n┃┃╋┃┏┫┃┃╋┃┃┃┃\n┗┻┓┣━┻┻┻━┻┻━┛\n╋╋┗┛ **\n\n **⎈ ⦙  هـذا تـحـذيـرك الأخـيـر ، ارسـل رسـالـة واحـدة وسـيـتـم حـظـرك تـلـقـائـيـاً . ‼️ **"
+    text = "**ⵧⵧ𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸ⵧⵧ **\n\n **⎈ ⦙  هـذا تـحـذيـرك الأخـيـر ، ارسـل رسـالـة واحـدة وسـيـتـم حـظـرك تـلـقـائـيـاً . ‼️ **"
     sqllist.add_to_list("pmspam", event.query.user_id)
     try:
      PM_WARNS = sql.get_collection("pmspam").json

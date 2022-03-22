@@ -920,15 +920,7 @@ async def iq(event):
   pic = await ogtah.download_media()
   await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @H1HH2""")
   await event.delete()
-@iqthon.on(admin_cmd(pattern="(تحمل|ختفتح)(?: |$)(.*)"))  
-async def iq(event):
-  if not event.is_reply:
-    return await event.edit('**يجـب عـليك الـرد عـلى صـورة ذاتيـة الـتدمير**')
-  ogtah = await event.get_reply_message()
-  pic = await ogtah.download_media()
-  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @H1HH2""")
-  await event.delete()
-@iqthon.on(admin_cmd(pattern="(نت|اوف|ثواني|حلو|خليحمل)(?: |$)(.*)"))  
+@iqthon.on(admin_cmd(pattern="(نت|اوف|ثواني|حلو|خليحمل|تحمل|ختفتح)(?: |$)(.*)"))  
 async def iq(event):
   if not event.is_reply:
     return await event.edit('**يجـب عـليك الـرد عـلى صـورة ذاتيـة الـتدمير**')

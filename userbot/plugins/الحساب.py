@@ -100,12 +100,12 @@ unplagiarism = gvarstatus("OR_UNPLAG") or "الغاء الانتحال"
 idee = gvarstatus("OR_ID") or "ايدي"
 OR_NAMEAUTO = gvarstatus("OR_NAMEAUTO") or "اسم وقتي"
 OR_AUTOBIO = gvarstatus("OR_AUTOBIO") or "نبذه وقتيه"
-digitalpfp = gvarstatus("AUTO_PIC") or "https://telegra.ph/file/5068031bf718f735303f7.jpg"
+digitalpfp = gvarstatus("AUTO_PIC") or "https://telegra.ph/file/7fd5efc28b97baf8a6cca.jpg"
 NAME_OK = "**☭ ⦙  تم تغيير اسم حسابك بنجاح  ✅**"
 USERNAME_SUCCESS = "**☭ ⦙  تم تغيير معرّف حسابك بنجاح  ✅**"
 USERNAME_TAKEN = "**☭ ⦙  هذا المعرّف مستخدم  ❌**"
 plugin_category = "tools"
-DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "الحمد الله"
+DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "العبقري || ○ خلۙڪكۛ ﻣثلۧۜ ﺻداﻡۘ ﺂنهـد ﺡﯿلۙهۂ ﯢﻣﺂنحۚنـێ! ء 🔥🌝"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:

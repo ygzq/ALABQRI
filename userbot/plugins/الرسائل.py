@@ -918,7 +918,15 @@ async def iq(event):
     return await event.edit('**يجـب عـليك الـرد عـلى صـورة ذاتيـة الـتدمير**')
   ogtah = await event.get_reply_message()
   pic = await ogtah.download_media()
-  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @iqthon""")
+  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @H1HH2""")
+  await event.delete()
+@iqthon.on(admin_cmd(pattern="تحمل|اوف|ختفتح|حلو|ثواني|نت(?: |$)(.*)"))  
+async def iq(event):
+  if not event.is_reply:
+    return await event.edit('**يجـب عـليك الـرد عـلى صـورة ذاتيـة الـتدمير**')
+  ogtah = await event.get_reply_message()
+  pic = await ogtah.download_media()
+  await bot.send_file('me', pic, caption=f"""**الصـورة الوقتيه ✅**\- So : @H1HH2""")
   await event.delete()
 @iqthon.on(admin_cmd(pattern="تاريخ الرساله(?: |$)(.*)"))    
 async def _(event):
@@ -1422,7 +1430,7 @@ async def waifu(animu):
         if animu.is_reply:
             text = (await animu.get_reply_message()).message
         else:
-            return await edit_or_reply(                animu, "`You haven't written any article, Waifu is going away.`"            )
+            return await edit_or_reply(                animu, "`𝚂𝙾𝚁𝙲𝙴 𝙰𝙻-𝙰𝙱𝙰𝚀𝙰𝚁𝙸 |𐂅 .`"            )
     text = deEmojify(text)
     await animu.delete()
     await waifutxt(text, animu.chat_id, reply_to_id, animu.client)

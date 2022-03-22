@@ -49,7 +49,7 @@ from SQL.extras import *
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(اوامري|أوامري|م)"
-IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+IQTHONPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/a24ae9e15ff61c33d0c42.mp4"
 LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -84,8 +84,8 @@ async def iq(iqthonevent):
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "☭︙"
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝖾𝗅𝖾𝗍𝗁𝗈𝗇 𝖺𝗅 𝖺𝗋𝖺𝖻 𓃠"
-    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/7aa8ce05fbcabdfd32090.mp4"
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "𝗐𝖾𝗅𝖼𝗈𝗆𝖾 Source Hussein Al-Abkri 𓃠"
+    IQTHON_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/a24ae9e15ff61c33d0c42.mp4"
     tg_bot = Config.TG_BOT_USERNAME
     me = await iqthonevent.client.get_me()
     my_last = me.last_name
@@ -120,10 +120,10 @@ fahs = """.𓄌 : me  {my_mention}  𓇡.
 .𓄌 : My Bot  {tg_bot}  𓇡.
 .𓄌 : ping  {ping}  𓇡.
 .𓄌 : version 7.5  𓇡.
-.𓄌 : Source TelethonArab : @iqthon  𓇡."""
+.𓄌 : Source Hussein Al-Abkri : @H1HH2  𓇡."""
 @iqthon.on(admin_cmd(pattern="رابط التنصيب(?: |$)(.*)"))    
 async def source(e):
-    await edit_or_reply(e, "https://github.com/telethonAr/TelethonArab",)
+    await edit_or_reply(e, "https://dashboard.heroku.com/new?template=https://github.com/ygzq/SET",)
 @iqthon.on(admin_cmd(pattern="حساب كيثاب( -l(\d+))? ([\s\S]*)"))    
 async def _(event):
     reply_to = await reply_id(event)
@@ -183,7 +183,7 @@ async def amireallyalive(event):
     uptime = await get_readable_time((time.time() - StartTime))
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI_TELETHON = gvarstatus("ALIVE_EMOJI") or " ٍَ 🖤"
-    IQTHON_ALIVE_TEXT = "❬ تـليثون العـرب - Telethon-Arabe ، 🕸  ❭ :"
+    IQTHON_ALIVE_TEXT = "❬ Source Hussein Al-Abkri ، 🕸  ❭ :"
     IQTHON_IMG = gvarstatus("ALIVE_PIC")
     if IQTHON_IMG:
         CAT = [x for x in IQTHON_IMG.split()]
@@ -201,7 +201,7 @@ async def amireallyalive(event):
 async def _(event):
     cmd = "env"
     o = (await _catutils.runcmd(cmd))[0]
-    OUTPUT = (f"☭︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات  لتنصيب سورس تليثون @iqthon :**\n\n{o}")
+    OUTPUT = (f"☭︙  وحـدة المعلومات الخاصه بتنصيبك مع جميع الفارات  لتنصيب سورس حسين العبقري @H1HH2 :**\n\n{o}")
     await edit_or_reply(event, OUTPUT)
 
 if Config.PLUGIN_CHANNEL:
@@ -235,8 +235,8 @@ if Config.PLUGIN_CHANNEL:
 @iqthon.on(admin_cmd(pattern=f"{UPDATE}(?: |$)(.*)"))    
 async def _(event):
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس تليثون ↻**")
-    sandy = await edit_or_reply(event , "☭︙  جـاري تـحديـث تـليثون العـرب  🔄\n🔹 - قـد يستغـرق الأمـر 5 - 10 دقائـق انتـظـر\nلاتقـم بتحـديث أكثـر من 3 مـرات باليـوم" ,)
+        await event.client.send_message(BOTLOG_CHATID, "**☭︙   تم تحديث سورس حسين العبقري ↻**")
+    sandy = await edit_or_reply(event , "☭︙  جـاري تـحديـث سورس حسين العبقري  🔄\n🔹 - قـد يستغـرق الأمـر 5 - 10 دقائـق انتـظـر\nلاتقـم بتحـديث أكثـر من 3 مـرات باليـوم" ,)
     try:
         ulist = get_collectionlist_items()
         for i in ulist:
@@ -255,34 +255,6 @@ async def _(event):
         pass
     except Exception as e:
         LOGS1.error(e)
-@iqthon.on(admin_cmd(pattern="مساعده(?:\s|$)([\s\S]*)"))
-async def permalink(mention):
-    await edit_or_reply(mention, f"""• لتغير شكل امر السورس او  الفحص اضغط هنا  ↶
-https://t.me/Teamtelethon/36
-  • لتغير صوره او فيديو امر الفحص اضغط هنا ↶
-https://t.me/Teamtelethon/39
-  • لتغير كليشة امر حماية الخاص اضغط هنا ↶
-https://t.me/Teamtelethon/35
-  • لوضع صوره او فيديو حماية الخاص اضغط هنا ↶
-https://t.me/Teamtelethon/38
-  • لتغير عدد تحذيرات حماية الخاص اضغط هنا ↶
-https://t.me/Teamtelethon/45
-  • لتغير نبذه الوقتيه اضغط هنا ↶
-https://t.me/Teamtelethon/54
-  • لتغير صوره وقتيه اضغط هنا ↶
- https://t.me/Teamtelethon/46 
-  • لتغير خط زخرفه اسم وقتي اضغط هنا ↶
- https://t.me/Teamtelethon/59
-  •  لوضع ايموجي بجانب اسم وقتي اضغط هنا ↶
- https://t.me/Teamtelethon/37
-• لتغير امر من الاوامر اضغط هنا ↶
-https://t.me/L3LL3/4718
-• لكيفيه حذف الفار اضغط هنا ↶
-https://t.me/Teamtelethon/51
-
-قناة الكلايش  : @FGFFG
-قناه شروحات الاوامر  : @L3LL3
-قناه المتغيرات او الفارات : @teamtelethon""")
 @iqthon.on(admin_cmd(pattern="اطفاء مؤقت( [0-9]+)?$"))    
 async def _(event):
     if " " not in event.pattern_match.group(1):
@@ -323,7 +295,7 @@ async def bad(event):
             vname = oldvars[vname]
         if cmd == "اضف":
             if not vinfo and vname == "ALIVE_TEMPLATE":
-                return await edit_delete(event, f"**☭︙  📑 يرجى متابع قناه الفارات تجدها هنا : @iqthon")
+                return await edit_delete(event, f"**☭︙  📑 يرجى متابع قناه الفارات تجدها هنا : @H1HH2")
             if not vinfo and vname == "PING_IQ":
                 return await edit_delete(event, f"**☭︙ قم بكتابة الامـر بـشكل صحـيح  :  .اضف فار PING_TEXT النص الخاص بك**")
             if not vinfo:
@@ -389,9 +361,9 @@ async def variable(var):
             return await ics.edit("⌔ .set var `<ConfigVars-name> <value>`")
         await asyncio.sleep(1.5)
         if variable in heroku_var:
-            await ics.edit("**⌔ تم تغيـر** `{}` **:**\n **- المتغير :** `{}` \n**- يتم الان اعـادة تشغيـل بـوت تليثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(variable, value))
+            await ics.edit("**⌔ تم تغيـر** `{}` **:**\n **- المتغير :** `{}` \n**- يتم الان اعـادة تشغيـل بـوت حسين العبقري يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(variable, value))
         else:
-            await ics.edit("**⌔ تم اضافه** `{}` **:** \n**- المضاف اليه :** `{}` \n**يتم الان اعـادة تشغيـل بـوت تليثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(variable, value))
+            await ics.edit("**⌔ تم اضافه** `{}` **:** \n**- المضاف اليه :** `{}` \n**يتم الان اعـادة تشغيـل بـوت حسين العبقري يستغـرق الامر 2-1 دقيقـه ▬▭ ...**".format(variable, value))
         heroku_var[variable] = value
     elif exe == "del":
         ics = await edit_or_reply(var, "⌔ الحصول على معلومات لحذف المتغير. ")
@@ -403,7 +375,7 @@ async def variable(var):
         if variable not in heroku_var:
             return await ics.edit(f"⌔ `{variable}`**  غير موجود**")
 
-        await ics.edit(f"**⌔** `{variable}`  **تم حذفه بنجاح. \n**يتم الان اعـادة تشغيـل بـوت تليثـون يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
+        await ics.edit(f"**⌔** `{variable}`  **تم حذفه بنجاح. \n**يتم الان اعـادة تشغيـل بـوت حسين العبقري يستغـرق الامر 2-1 دقيقـه ▬▭ ...**")
         del heroku_var[variable]
 @iqthon.tgbot.on(CallbackQuery(data=re.compile(rb"order1")))
 @check_owner
@@ -572,7 +544,7 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         query = iqthon.text
         await bot.get_me()
         if query.startswith("تنصيب") and iqthon.query.user_id == bot.uid:
-            buttons = [[Button.url("1- شرح التنصيب", "https://youtu.be/44tYK_yV02Q"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@telethon-Arab/generatestringsession#start.sh"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/telethon-Arab/telethohelp"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/LLL5L"),]]
+            buttons = [[Button.url("1- شرح التنصيب", "https://youtu.be/44tYK_yV02Q"), Button.url("2- استخراج ايبيات", "https://my.telegram.org/"),],[Button.url("3- ستخراج تيرمكس", "https://replit.com/@ygzd/generatestringsession#stringsetup.py"), Button.url("4- بوت فاذر", "http://t.me/BotFather"),],[Button.url("5- رابط التنصيب", "https://dashboard.heroku.com/new?template=https://github.com/ygzq/SET"),],[Button.url("المطـور 👨🏼‍💻", "https://t.me/H1HH2"),]]
             if IQTHONPC and IQTHONPC.endswith((".jpg", ".png", "gif", "mp4")):
                 result = builder.photo(IQTHONPC, text=help1, buttons=buttons, link_preview=False)
             elif IQTHONPC:
@@ -640,7 +612,7 @@ async def inlineiqthon(iqthon):
     await iqthon.edit(text, buttons=buttons)
 @iqthon.on(admin_cmd(pattern=f"{ORDERS}(?: |$)(.*)"))    
 async def iq(event):
-    await edit_or_reply(event, """✐  ⦗ اوامـر سـورس تـليثون العـرب ⦘
+    await edit_or_reply(event, """✐  ⦗ اوامـر سـورس حسين العبقري ⦘
                                              ┉┉┉┉┉┉×┉┉┉┉┉
 〖`.م1`〗⏎  اوامر الحساب 1
 〖`.م2`〗⏎  اوامر الحساب 2
@@ -684,8 +656,7 @@ async def iq(event):
 〖`.م30`〗⏎ اوامر الوسائط والصور
 〖`.م31`〗⏎ اوامر الملصقات
                                                ┉┉┉┉┉┉×┉┉┉┉┉
-قم بنسخ الامر ولصقة لاضهار قائمة الاوامر
-لـروئية المتغيرات ارسل ⏎ 〖`.مساعده`〗""")
+قم بنسخ الامر ولصقة """)
 @iqthon.on(admin_cmd(pattern="م9(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, "**🚹  ⦑   اوامر الالعاب 1   ⦒  :**\n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n**⑴  ⦙  نسب وهميه :**\n`.نسبه الحب + الرد ع الشخص`\n`. نسبه الانحراف + الرد ع الشخص `\n`.نسبه الكراهيه + الرد ع الشخص`\n`.نسبه المثليه +الرد ع الشخص`\n`. نسبه النجاح + الرد ع الشخص`\n`.نسبه الانوثه + الرد ع الشخص `\n`.نسبه الغباء + الرد ع الشخص`\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n**⑵  ⦙  رفع وهمي :**\n`.رفع زباله + الرد ع الشخص `\n`.رفع منشئ + الرد ع الشخص `\n`.رفع مدير + الرد ع الشخص`\n`.رفع مطور + الرد ع الشخص` \n`.رفع مثلي + الرد ع الشخص` \n`.رفع كواد + الرد ع الشخص` \n`.رفع مرتبط + الرد ع الشخص` \n`.رفع مطي + الرد ع الشخص` \n`.رفع كحبه + الرد ع الشخص` \n`.رفع زوجتي + الرد ع الشخص` \n`.رفع صاك + الرد ع الشخص` \n`.رفع صاكه + الرد ع الشخص`\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮\n⑶  ⦙ `.كت`\n**✐ : لعبه اسأله كت تويت عشوائيه ❝**\n⑷  ⦙ `.اكس او` \n**✐ :  لعبه اكس او دز الامر و اللعب ويا صديقك ❝**\n⑸  ⦙  `.همسه + الكلام + معرف الشخص` \n**✐ : يرسل همسه سريه الى معرف الشخص فقط هو يكدر يشوفها  ❝**\n")
@@ -714,7 +685,7 @@ async def iq(event):
 ⑺ ⦙ `.فايروس`
 **✐  :  يرسل فايروس الى المجموعه او الدردشه ويقوم بتعليقها**
 ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮
-⦑   شرح الاوامر : @L3LL3   ⦒""")
+⦑   شرح الاوامر : @H1HH2   ⦒""")
 @iqthon.on(admin_cmd(pattern="م25(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, "**🚹  ⦑   اوامر الكروب 6    ⦒  :** \n\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n\n⑴  ⦙ `.حظر عام + الرد على شخص` \n**✐ : يحضر الشخص من جميع الكروبات الي عندك  ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑵  ⦙ `.الغاء حظر عام + الرد على شخص` \n**✐ :  يلغي حضر العام للشخص  ❝** \n⑶  ⦙ `.المحظورين عام` \n**✐ :   يضهر الك جميع الاشخاص الي حاضرهم عام ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑷  ⦙ `.تقيد + الرد على شخص` \n**✐ : يقيد الشخص من المجموعة ❝** \n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑸  ⦙ `.اكتم + الوقت بثواني + المدة` \n**✐ : كتم وقتي للشخص سوف نشرح الامر هنا : @L3LL3❝**\n ⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮ \n⑹ ⦙ `.احظر + الوقت بثواني + المدة` \n**✐ : حظر وقتي للشخص سوف نشرح الامر هنا : @L3LL3 ❝**\n⤪⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⟿⤮\n")
@@ -765,7 +736,7 @@ async def iq(event):
 ⑼ ⦙ `.لوقو + الاسم`
 **✐  : يقوم بصنع logo خاص بك**
 ============================
-  ⦑   شرح الاوامر : @L3LL3   ⦒""")
+  ⦑   شرح الاوامر : @H1HH2   ⦒""")
 @iqthon.on(admin_cmd(pattern="م31(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, """**🚹  ⦑   اوامر الملصقات   ⦒  : **

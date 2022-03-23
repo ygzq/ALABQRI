@@ -1085,6 +1085,4 @@ async def repoiqthon(iqthon):
 @iqthon.on(admin_cmd(pattern="فتح همسه(?: |$)(.*)"))    
 async def iq(event):
     await edit_or_reply(event, "**عزيزي كل عقلك ؟  **\n**وين اكو شي اسمه فتح همسة عرض العالم ماتخاف علية ادبسزز ولي يلة 🙂💔**")
-    @iqthon.on(admin_cmd(pattern="لوتي(?: |$)(.*)"))    
-async def iq(event):
-    await edit_or_reply(event, "**نت.اوف.ثواني.حلو.خليحمل.تحمل.ختفتح 🙂💔**")
+ 

@@ -237,30 +237,32 @@ async def _(iqthon):  # sourcery no-metrics
             sandy = True
             await iqevent.edit(i, parse_mode=_format.parse_pre)
 @iqthon.on(admin_cmd(pattern="تيك(?: |$)(.*)"))
-async def _(iqthon):
-    reply_message = await iqthon.get_reply_message()
-    if not reply_message:
-        await edit_or_reply(iqthon, "**⎈ ⦙  الرد على الرابط.**")
+async def _(event):
+    if event.fwd_from:
         return
-    if not reply_message.text:
-        await edit_or_reply(iqthon, "**⎈ ⦙  الرد على الرابط.**")
-        return
-    chat = "@fs0bot"
-    iqevent = await edit_or_reply(iqthon, "**⎈ ⦙  جاري تحميل الرابط**")
-    async with iqthon.client.conversation(chat) as conv:
+    r_link = event.pattern_match.group(1)
+    if ".com" not in r_link:
+        await event.edit("**▾∮ يجب وضع رابط الفيديو مع الامر اولا **")
+    else:
+        await event.edit("**▾∮ تتم المعالجة انتظر قليلا**")
+    chat = "@ttsavebot"
+    async with bot.conversation(chat) as conv:
         try:
-            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1354606430))
-            await iqthon.client.forward_messages(chat, reply_message)
-            response = await response
-            await iqthon.client.send_read_acknowledge(conv.chat_id)
+            msg_start = await conv.send_message("/start")
+            r = await conv.get_response()
+            msg = await conv.send_message(r_link)
+            details = await conv.get_response()
+            video = await conv.get_response()
+            """ حسين العبقري @H1HH2 """
+            await bot.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await iqevent.edit("**⎈ ⦙  فك الحظر من البوت : @fs0bot**")
+            await event.edit("▾∮ الغـي حـظر هـذا البـوت و حـاول مجـددا @ttsavebot")
             return
-        if response.text.startswith("؟"):
-            await iqevent.edit("?")
-        else:
-            await iqevent.delete()
-            await iqthon.client.send_message(iqthon.chat_id, response.message)
+        await bot.send_file(event.chat_id, video)
+        await event.client.delete_messages(
+            conv.chat_id, [msg_start.id, r.id, msg.id, details.id, video.id]
+        )
+        await event.delete()
 @iqthon.on(admin_cmd(pattern="زخرفه_عربي ?(.*)"))
 async def _(event):
     input_str = event.pattern_match.group(1)

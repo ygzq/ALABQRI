@@ -307,7 +307,7 @@ async def _(event):
                 "ﺂجتمـا؏\n"
                 "ٵჂ̤"
             )
-@iqthon.on(admin_cmd(pattern="اختصارات5(?: |$)(.*)"))
+@iqthon.on(admin_cmd(pattern="ترحيبات(?: |$)(.*)"))
 async def _(event):
     await edit_or_reply(event,
                 "-  .ترحيب هَِـلا يڪَِـمـࢪ نورِت كـروب {title} 💞🦋 .\n"

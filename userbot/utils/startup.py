@@ -15,7 +15,7 @@ from ..sql_helper.global_collection import del_keyword_collectionlist, get_item_
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from .klanr import load_module
 from .tools import create_supergroup
-LOGS = logging.getLogger("تليثون العرب \n ")
+LOGS = logging.getLogger("سورس حسين العبقري \n ")
 cmdhr = Config.COMMAND_HAND_LER
 async def load_plugins(folder):
     path = f"userbot/{folder}/*.py"
@@ -46,7 +46,7 @@ async def load_plugins(folder):
 async def startupmessage():
     try:
         if BOTLOG:
-            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/7fe6990ff2291b21af220.mp4", caption="**⎈ ⦙ تـمّ تـحديـث تليثـون العـرب ✓  :**  [ 7.5 ] \n \n**⎈ ⦙ للحصول على اوامر السورس أرسل :** (  `.الاوامر`  ) \n**⎈ ⦙ يحتاج لتفعيل اونلاين أو أرسل :** (  `.اوامري`  )\n\n**⎈ ⦙ القناة الرسمية : @IQTHON **\n**⎈ ⦙ فارات سورس تليثون  : @TEAMTELETHON **\n**⎈ ⦙ كلايش تليثون :  @FGFFG**",                buttons=[(Button.url("مجموعه تليثون", "https://t.me/KLANR"),)],            )
+            Config.CATUBLOGO = await iqthon.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/aa40d271ef9f4dac12df4.mp4", caption="**⎈ ⦙ تـمّ تـحديـث سورس حسين العبقري ✓  :**  [ 7.5 ] \n \n**⎈ ⦙ للحصول على اوامر السورس أرسل :** (  `.الاوامر`  ) \n**⎈ ⦙ يحتاج لتفعيل اونلاين أو أرسل :** (  `.اوامري`  )\n\n**⎈ ⦙ **",                buttons=[(Button.url("مجموعه تليثون", "https://t.me/H1HH2"),)],            )
     except Exception as e:
         LOGS.error(e)
         return None
@@ -118,7 +118,7 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error(                "⌔︙ حدث استثناء عند محاولة التحقق من PM_LOGGER_GROUP_ID.\n" + str(e)            )
     else:
-        descript = "⌔︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @IQTHON"
+        descript = "⌔︙ وظيفه هذا المجموعة لحفض رسائل التي تكون موجة اليك ان لم تعجبك هذا المجموعة قم بحذفها نهائيأ 👍 \n  الـسورس : - @H1HH2"
         _, groupid = await create_supergroup(            "كـروب تخزين الخاص", iqthon, Config.TG_BOT_USERNAME, descript        )
         addgvar("PM_LOGGER_GROUP_ID", groupid)
         print("⌔︙ تم إنشاء مجموعة خاصة لـ PRIVATE_GROUP_BOT_API_ID بنجاح وإضافتها إلى المتغيرات.")

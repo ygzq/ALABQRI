@@ -157,8 +157,8 @@ async def pyZip(e):
     dl_ = await e.client.download_media(reply)
     await eris.edit("-->تم الاكتمال ..<--")
     nem_ = reply.file.name
-    zip_ = f"{nem_}.zip" if nem_ else "iqthon_Zip.zip"
-    password = pass_ if pass_ else "iqthon"
+    zip_ = f"{nem_}.zip" if nem_ else "AlAbkri_Zip.zip"
+    password = pass_ if pass_ else "H1HH2"
     cap_ = f"**اسم الملف :** - {zip_} \n"\
     f"**الباسبورد لفك الملف :** - `{password}`"
     
@@ -2032,9 +2032,9 @@ async def iq(event):
     type_of_group = event.pattern_match.group(1)
     group_name = event.pattern_match.group(2)
     if type_of_group == "قناه":
-        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "☭ ⦙   هذه قناة إختبار أُنشئت بإستعمال حسين العبقري"
     else:
-        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال تليثون العرب"
+        descript = "☭ ⦙   هذه المجموعه إختبار أُنشئت بإستعمال حسين العبقري"
     if type_of_group == "مجموعه":
         try:
             result = await event.client(functions.messages.CreateChatRequest(users=[Config.TG_BOT_USERNAME], title=group_name))
